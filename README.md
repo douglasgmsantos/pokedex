@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+   <img src="https://github.com/douglasgmsantos/pokedex/blob/main/public/logo.png" alt="Logo" width="280"/>
+</p>
 
-## Getting Started
+<p align="center">
+   <a href="https://www.linkedin.com/in/douglas-santos-72043436/">
+      <img alt="Douglas Santos" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" />
+   </a>
+</p>
 
-First, run the development server:
+<div align="center">
+  <sub>O projeto foi desenvolvido pelo 
+    <a href="https://github.com/douglasgmsantos">Douglas Santos</a>
+  </sub>
+</div>
+
+# :pushpin: Conteúdo
+
+- [Tecnologias](#computer-tecnologias)
+- [Executando](#construction_worker-executando)
+- [Autores](#computer-autores)
+- [Licença](#closed_book-licença)
+
+# :computer: Tecnologias
+
+Este projeto foi feito utilizando as seguintes tecnologias:
+
+react-icons
+react-infinite-scroll-component
+react-loading-skeleton
+
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Axios](https://github.com/axios/axios)
+- [Styled Components](https://github.com/styled-components/styled-components)
+- [React Hook Form](https://react-hook-form.com/)
+- [React Icons](https://react-icons.github.io/)
+- [React Infinite scroll Infinite](https://www.npmjs.com/package/react-infinite-scroll-component)
+- [React loading Skeleton](https://www.npmjs.com/package/react-loading-skeleton)
+
+# :construction_worker: Executando
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone o Repositório
+$ git@github.com:douglasgmsantos/pokedex.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+# Acesse a pasta do projeto
+$ cd pokedex
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+# Baixe as dependendências
+$ yarn
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+# Execute
+$ yarn dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Acesse <http://localhost:3000> para ver o resultado.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# :computer: Autores
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<table>
+  <tr>
+    <td align="center">
+      <a href="http://github.com/douglasgmsantos/">
+        <img src="https://avatars.githubusercontent.com/douglasgmsantos" width="100px;" alt="Douglas Santos"/>
+        <br />
+        <sub>
+          <b>Douglas Santos</b>
+        </sub>
+       </a>
+       <br />
+       <a href="https://www.linkedin.com/in/douglas-santos-72043436/" title="Linkedin">@douglassantos</a>
+       <br />
+       <a href="https://github.com/douglasgmsantos/fastfeet-api/commits?author=douglasgmsantos" title="Code">💻</a>
+    </td>
+  </tr>
+</table>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# :closed_book: Licença
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este projeto está sob a licença [MIT](./LICENSE).
