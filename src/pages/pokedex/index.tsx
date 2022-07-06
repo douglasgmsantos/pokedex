@@ -1,11 +1,10 @@
-import { useRouter } from 'next/router';
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 
 import InfiniteScroll from "react-infinite-scroll-component";
 
-
 import Card from '../../components/Card';
 import Footer from '../../components/Footer';
+import ScrollPage from '../../components/ScrollTopPage';
 
 import { PokemonContext } from '../../contexts/pokemon';
 
@@ -14,10 +13,7 @@ import { Container, Content, Grid, Logo } from "./styles";
 export default function Pokedex() {
     const [limit, setlimit] = useState(15)
     const { pokemons, loadPokemons } = useContext(PokemonContext);
-    const { query } = useRouter();
     
-
-
     useEffect(() => {
         loadPokemons(limit)
     },[limit])
@@ -44,6 +40,7 @@ export default function Pokedex() {
                 </InfiniteScroll>
             </Content>
             <Footer />
+            <ScrollPage />
         </Container>
     )
 }
