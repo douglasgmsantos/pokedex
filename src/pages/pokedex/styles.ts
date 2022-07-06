@@ -7,6 +7,10 @@ export const Content = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .infinite-scroll-component__outerdiv{
+        width: 100%;
+    }
 `;
 
 export const Logo = styled.img`

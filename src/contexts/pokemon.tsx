@@ -26,7 +26,7 @@ interface IPokemon {
 interface PokemonContext {
   loading: boolean;
   pokemons: IPokemon[];
-  loadPokemons(limit: number, offset: number): Promise<void>;
+  loadPokemons(limit?: number, offset?: number): Promise<void>;
 }
 
 const PokemonContext = createContext<PokemonContext>({} as PokemonContext);
