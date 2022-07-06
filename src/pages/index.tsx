@@ -1,9 +1,11 @@
 import type { NextPage } from 'next'
-import Pokemon from './pokemon'
+import Pokedex from './pokedex'
 
 const Home: NextPage = () => {
   return (
-    <Pokemon />
+    <>
+      <Pokedex />
+    </>
   )
 }
 

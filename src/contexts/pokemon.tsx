@@ -26,7 +26,7 @@ interface IPokemon {
 interface PokemonContext {
   loading: boolean;
   pokemons: IPokemon[];
-  loadPokemons(): Promise<void>;
+  loadPokemons(limit: number, offset: number): Promise<void>;
 }
 
 const PokemonContext = createContext<PokemonContext>({} as PokemonContext);
@@ -35,10 +35,11 @@ const PokemonProvider = ({ children }: IPokemonProvider) => {
   const [pokemons, setPokemons] = useState<IPokemon[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const loadPokemons = async () => {
+  const loadPokemons = async (limit: number = 151, offset: number = 0) => {
+    console.log("loadPokemons", limit, offset)
     try {
       setLoading(true);
-      const response = await api().get<IPokemonResult>("/pokemon", { params: { limit: 200, offset: 0 } });
+      const response = await api().get<IPokemonResult>("/pokemon", { params: { limit, offset } });
       if(response.status != 200)
         throw response
 

@@ -92,8 +92,8 @@ export default function Card({ name, url } : ICardProps) {
                             {pokemon?.types.map(({ type:typeItem }) => <Type key={typeItem.name} type={type}> {typeItem.name} </Type>)}
                         </Types>
                         <Stats>
-                            {Object.keys(pokemon?.stats_formatted as any || {}).map(key =>  (
-                                <Stat>
+                            {Object.keys(pokemon?.stats_formatted as any || {}).map((key, index) =>  (
+                                <Stat key={index}>
                                     <ContainerStatValue>
                                         <StatKey>{key}</StatKey>  
                                         <StatValue type={type} value={pokemon?.stats_formatted[key]} />

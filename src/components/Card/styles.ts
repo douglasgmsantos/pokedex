@@ -10,6 +10,9 @@ export const Container = styled.div<IContainer>`
     border-radius: 10px;
 
     border: 2px solid var(--type-${({type} ) => type});
+    -moz-box-shadow: inset 5px 5px 30px var(--type-${({type} ) => type});
+    -webkit-box-shadow: inset 5px 5px 30px var(--type-${({type} ) => type});
+    box-shadow: inset 5px 5px 30px var(--type-${({type} ) => type});  
 
     padding: 1rem;
 `;
@@ -60,11 +63,28 @@ interface IAvatar {
 }
 
 export const Avatar = styled.img<IAvatar>`
-  -moz-box-shadow: inset 10px 10px 50px var(--type-${({type} ) => type});
-  -webkit-box-shadow: inset 10px 10px 50px var(--type-${({type} ) => type});
-  box-shadow: inset 10px 10px 50px var(--type-${({type} ) => type});  
-  border-radius: 50%;
-  margin: 0.5rem;
+    border: 0;
+    color: var(--type-${({type} ) => type});
+    box-shadow: 0 0 1em var(--type-${({type} ) => type}),inset 0 0 .8em var(--type-${({type} ) => type});
+
+    filter: drop-shadow(0 0 50px var(--type-${({type} ) => type}));
+
+    border-radius: 50%;
+    margin: 0.5rem;
+
+    animation: animate 2.5s linear infinite;
+
+    @keyframes animate{
+        0% {
+            filter: drop-shadow(0 0 40px);
+        }
+        50% {
+            filter: drop-shadow(0 0 10px);
+        }
+        100% {
+            filter: drop-shadow(0 0 40px);
+        }
+    }
 `;
 
 export const Header = styled.header`
@@ -95,6 +115,7 @@ export const Type = styled.div<IType>`
     border-radius: 10px;
 
     font-weight: 700;
+    text-transform: capitalize;
 
     color: var(--neutral-smooth);
 `;
