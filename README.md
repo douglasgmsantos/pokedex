@@ -25,10 +25,6 @@
 
 Este projeto foi feito utilizando as seguintes tecnologias:
 
-react-icons
-react-infinite-scroll-component
-react-loading-skeleton
-
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Axios](https://github.com/axios/axios)
