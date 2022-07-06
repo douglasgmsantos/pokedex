@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import ReactLoading from 'react-loading';
 import { api } from '../../services/api';
+
+import SkeletonLoading from './skeletonLoading';
 
 import { 
     Container, 
@@ -104,7 +105,7 @@ export default function Card({ name, url } : ICardProps) {
                         </Stats>
                     </Container> 
                 )
-                : ( <ContainerLoading><ReactLoading type="spin" width={25} height={25} /></ContainerLoading> )
+                : ( <SkeletonLoading type={"normal"}/> )
             }
         </>
     )

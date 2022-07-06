@@ -5,7 +5,7 @@ interface IContainer {
 }
 
 export const Container = styled.div<IContainer>`
-    height: 40rem;
+    height: 43rem;
 
     border-radius: 10px;
 
@@ -95,6 +95,7 @@ export const Header = styled.header`
 export const Types = styled.div`
     display: flex;
     justify-content: center;
+    margin: 1rem 0;
 `;
 
 interface IType {

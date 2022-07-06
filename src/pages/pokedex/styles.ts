@@ -18,15 +18,16 @@ export const Logo = styled.img`
 `;
 
 export const Grid = styled.div`
-    width: 95%;
+    width: 100%;
+
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-
     grid-auto-rows: minmax(min-content, max-content);
 
+    padding: 0 1rem;
 
     justify-content: center;
 `;

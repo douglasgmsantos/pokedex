@@ -12,7 +12,7 @@ import { PokemonContext } from '../../contexts/pokemon';
 import { Container, Content, Grid, Logo } from "./styles";
 
 export default function Pokedex() {
-    const [limit, setlimit] = useState(20)
+    const [limit, setlimit] = useState(15)
     const { pokemons, loadPokemons } = useContext(PokemonContext);
     const { query } = useRouter();
     
@@ -23,7 +23,7 @@ export default function Pokedex() {
     },[limit])
 
     const morePokemons = useCallback(() => {
-        setlimit(limit + 20)
+        setlimit(limit + 15)
     },[limit])
 
     return (
