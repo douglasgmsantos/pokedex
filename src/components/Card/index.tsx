@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import { api } from '../../services/api';
 
-import SkeletonLoading from './skeletonLoading';
+import CardSkeleton from './CardSkeleton';
 
 import { 
     Container, 
-    ContainerLoading,
     Avatar,
     Header,
     Name,
@@ -105,7 +104,7 @@ export default function Card({ name, url } : ICardProps) {
                         </Stats>
                     </Container> 
                 )
-                : ( <SkeletonLoading type={"normal"}/> )
+                : ( <CardSkeleton type={"normal"}/> )
             }
         </>
     )

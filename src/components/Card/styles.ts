@@ -17,13 +17,6 @@ export const Container = styled.div<IContainer>`
     padding: 1rem;
 `;
 
-export const ContainerLoading = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-`;
-
 export const Info = styled.div`
     display: flex;
     justify-content: space-between;

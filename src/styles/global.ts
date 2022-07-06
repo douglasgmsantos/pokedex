@@ -4,8 +4,8 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 export default createGlobalStyle`
 :root{
-  --primary: #FFF159;
-  --blue: #3483fa;
+  --primary: #FFC700;
+  --secondary: #195AAB;
   --neutral-strong: #353546;
   --neutral-stronger: #23242f;
   --neutral-strongest: #13141b;
