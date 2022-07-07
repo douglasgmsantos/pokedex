@@ -16,7 +16,7 @@ export default function Pokedex() {
     
     useEffect(() => {
         loadPokemons(limit)
-    },[limit])
+    },[limit, loadPokemons])
 
     const morePokemons = useCallback(() => {
         setlimit(limit + 15)
