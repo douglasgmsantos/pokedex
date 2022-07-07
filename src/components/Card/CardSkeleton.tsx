@@ -29,7 +29,7 @@ export default function CardSkeleton({ type }: SkeletonLoadingProps) {
                 </Types>
                 <Stats>
                     {[1,2,3,4,5,6].map(i => (
-                        <Stat>
+                        <Stat key={i}>
                             <Skeleton count={1} />
                         </Stat>
                     ))}

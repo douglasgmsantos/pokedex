@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, useEffect } from "react";
+import { createContext, useState, ReactNode, useEffect, useCallback } from "react";
 
 import { api } from "../services/api";
 
@@ -35,8 +35,7 @@ const PokemonProvider = ({ children }: IPokemonProvider) => {
   const [pokemons, setPokemons] = useState<IPokemon[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const loadPokemons = async (limit: number = 151, offset: number = 0) => {
-    console.log("loadPokemons", limit, offset)
+  const loadPokemons = useCallback(async (limit: number = 151, offset: number = 0) => {
     try {
       setLoading(true);
       const response = await api().get<IPokemonResult>("/pokemon", { params: { limit, offset } });
@@ -49,7 +48,7 @@ const PokemonProvider = ({ children }: IPokemonProvider) => {
     }finally{
       setLoading(false);
     }
-  }
+  },[])
   
   return (
     <PokemonContext.Provider value={{
