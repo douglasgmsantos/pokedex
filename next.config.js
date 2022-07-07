@@ -4,6 +4,7 @@ const nextConfig = {
   compilerOptions: {
     baseUrl: "src"
   },
+  pageExtensions: ['jsx','tsx'],
 }
 
 module.exports = nextConfig
