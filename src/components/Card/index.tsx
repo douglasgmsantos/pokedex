@@ -53,7 +53,7 @@ export default function Card({ name, url } : ICardProps) {
                 const response = await api().get<IPokemon>(url);
                 if(response.status === 200){
                     let pokemonResponse = response.data;
-                    let newStat = {};
+                    let newStat:any = {};
                     
                     pokemonResponse.stats.forEach(stat => {
                         newStat[stat.stat.name as any] = stat.base_stat;
