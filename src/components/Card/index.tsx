@@ -28,7 +28,7 @@ interface ICardProps {
 interface IPokemon {
     id: number;
     stats: [{ base_stat: number, stat: { name: string } }]
-    stats_formatted: {string : any}
+    stats_formatted: any;
     sprites : {
         front_default: string;
     },
@@ -96,7 +96,7 @@ export default function Card({ name, url } : ICardProps) {
                                 <Stat key={index}>
                                     <ContainerStatValue>
                                         <StatKey>{key}</StatKey>  
-                                        <StatValue type={type} value={pokemon?.stats_formatted[key]} />
+                                        <StatValue type={type} value={pokemon?.stats_formatted[key] || 0} />
                                         <p style={{ marginLeft: "5px", color: "var(--neutral-smoothest)"}}>{pokemon?.stats_formatted[key]}</p>
                                     </ContainerStatValue>
                                 </Stat>
