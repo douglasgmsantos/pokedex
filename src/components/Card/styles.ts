@@ -56,9 +56,12 @@ interface IAvatar {
 }
 
 export const Avatar = styled.img<IAvatar>`
+    width: 10rem;
+    height: 10rem;
+
     border: 0;
     color: var(--type-${({type} ) => type});
-    box-shadow: 0 0 1em var(--type-${({type} ) => type}),inset 0 0 .8em var(--type-${({type} ) => type});
+    box-shadow: 0 1 1em var(--type-${({type} ) => type}),inset 0 0 .8em var(--type-${({type} ) => type});
 
     filter: drop-shadow(0 0 50px var(--type-${({type} ) => type}));
 

@@ -31,6 +31,12 @@ interface IPokemon {
     stats_formatted: any;
     sprites : {
         front_default: string;
+        front_shiny: string;
+        other: {
+            home : {
+                front_default: string;
+            }
+        }
     },
     types: [{
         type: {
@@ -86,7 +92,7 @@ export default function Card({ name, url } : ICardProps) {
                             <ID type={type}>#{pokemon?.id}</ID>
                         </Info>
                         <Header>
-                            <Avatar src={pokemon?.sprites.front_default} type={type} />
+                            <Avatar src={pokemon?.sprites.other.home.front_default} type={type} />
                         </Header>
                         <Types>
                             {pokemon?.types.map(({ type:typeItem }) => <Type key={typeItem.name} type={type}> {typeItem.name} </Type>)}
